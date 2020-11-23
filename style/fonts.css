@@ -1,0 +1,13 @@
+@font-face {
+    font-family: "GothamPro";
+    src: url('fonts/GothamPro.ttf');
+    font-style: normal;
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: "GothamProBold";
+    src: url('fonts/GothamProBold.ttf');
+    font-style: normal;
+    font-weight: bold;
+}

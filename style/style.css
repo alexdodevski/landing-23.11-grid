@@ -1,0 +1,173 @@
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: "Open Sans", sans-serif;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block; }
+
+body {
+  line-height: 1;
+  margin: 0; }
+
+ol,
+ul {
+  list-style: none; }
+
+blockquote,
+q {
+  quotes: none; }
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none; }
+
+button {
+  font-family: "Open Sans", sans-serif; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+.container {
+  max-width: 1170px;
+  margin: 0 auto;
+  height: 100%; }
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box; }
+
+a {
+  text-decoration: none; }
+
+html {
+  scroll-behavior: smooth; }
+
+body {
+  font-family: "GothamPro", "Open Sans", sans-serif; }
+
+.container {
+  width: 980px;
+  height: 100%;
+  margin: 0 auto; }
+
+header {
+  height: 677px; }
+
+.nav {
+  height: 131px; }
+
+.logo__contact {
+  display: grid;
+  grid-template-columns: 250px 380px;
+  column-gap: 330px;
+  padding-top: 30px; }
+
+.logo {
+  display: flex;
+  align-items: center; }
+
+.logo__text {
+  margin-left: 14px;
+  margin-top: 5px; }
+  .logo__text h1 {
+    margin: 0;
+    text-transform: uppercase;
+    font-family: "GothamProBold";
+    font-size: 20px;
+    color: #292929;
+    letter-spacing: 2px; }
+  .logo__text p {
+    margin: 0; }
+
+.nav__contact {
+  display: flex;
+  align-items: center; }
+  .nav__contact button {
+    margin-left: 31px;
+    font-family: "GothamProBold";
+    font-size: 12px;
+    color: #292929;
+    background-color: #ffffff;
+    border: solid 2px #292929;
+    outline: none;
+    cursor: pointer;
+    padding: 13px 23px; }
+    .nav__contact button:hover {
+      background-color: #ffcc00; }
+
+.contact__text {
+  margin-left: 13px; }
+  .contact__text p {
+    font-family: "GothamProBold";
+    font-size: 18px;
+    margin: 0;
+    line-height: 1.22;
+    text-align: right;
+    color: #292929; }
+
+.description {
+  font-size: 11px;
+  line-height: 2;
+  color: #969696; }
+
+.nav-bar {
+  height: 60px;
+  background-color: #ffcc00; }
+
+.nav__buttons {
+  display: flex;
+  height: 100%;
+  align-items: center;
+  justify-content: space-around;
+  padding-left: 0; }
+  .nav__buttons li {
+    font-size: 14px;
+    color: #000000;
+    text-align: center;
+    line-height: 1.57;
+    font-family: "GothamProBold"; }
+
+/*# sourceMappingURL=style.css.map */

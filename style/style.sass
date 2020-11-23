@@ -1,0 +1,86 @@
+//imports
+@import reset
+
+//CONTAINER  and colors
+body
+    font-family: 'GothamPro', 'Open Sans', sans-serif
+.container
+    width: 980px
+    height: 100%
+    margin: 0 auto
+
+$yellow: #ffcc00
+$gray: #f4f4f4
+$black : #292929
+
+// HEADER 
+header
+    height: 677px
+
+// navigation
+.nav
+    height: 131px
+.logo__contact
+    display: grid
+    grid-template-columns: 250px 380px
+    column-gap: 330px
+    padding-top: 30px
+.logo
+    display: flex
+    align-items: center
+.logo__text
+    margin-left: 14px
+    margin-top: 5px
+    h1
+        margin: 0
+        text-transform: uppercase
+        font-family: 'GothamProBold'
+        font-size: 20px
+        color: $black
+        letter-spacing: 2px
+    p
+        margin: 0
+.nav__contact
+    display: flex
+    align-items: center
+    button
+        margin-left: 31px
+        font-family: 'GothamProBold'
+        font-size: 12px
+        color: $black
+        background-color: #ffffff
+        border: solid 2px $black
+        outline: none
+        cursor: pointer
+        padding: 13px 23px
+        &:hover
+            background-color: $yellow
+
+.contact__text
+    margin-left: 13px
+    p
+        font-family: 'GothamProBold'
+        font-size: 18px
+        margin: 0
+        line-height: 1.22
+        text-align: right
+        color: $black
+.description
+    font-size: 11px
+    line-height: 2
+    color: #969696
+.nav-bar
+    height: 60px
+    background-color: $yellow
+.nav__buttons
+    display: flex
+    height: 100%
+    align-items: center
+    justify-content: space-around
+    padding-left: 0
+    li
+        font-size: 14px
+        color: #000000
+        text-align: center
+        line-height: 1.57
+        font-family: 'GothamProBold'

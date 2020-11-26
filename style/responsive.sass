@@ -1,0 +1,47 @@
+@media screen and ( max-width:980px  )
+    .container
+        width: 100%
+    .logo__contact
+        grid-template-columns: 45% 45%
+        grid-template-rows: 85px
+        column-gap: 10%
+    .nav-bar
+        top: 20px
+    .nav__contact
+        column-gap: 50px
+        justify-content: flex-end
+
+    .contact__text
+        margin-left: 0
+
+@media screen and ( max-width:554px  )
+    .logo__contact
+        grid-template-columns: 100%
+        grid-template-rows: 100% 50%
+        column-gap: 0
+        justify-items: center
+    .nav
+        height: 140px
+        margin-top: 10px
+    .nav-bar
+        margin-top: 29px
+        padding: 20px 0
+
+    .nav__buttons
+        flex-direction: column
+        display: none
+        z-index: 0
+        li
+            padding: 2px 0
+    .btn_close_menu
+        opacity: 1 !important
+
+@media screen and ( max-width: 386px )
+    .nav
+        height: 230px
+    .nav-bar
+        margin-top: 70px
+    .nav__contact
+        flex-direction: column
+    .contact__text p
+        text-align: center

@@ -174,9 +174,9 @@ body {
     text-align: center;
     line-height: 1.57;
     font-family: "GothamProBold";
-    border-bottom: 3px solid #ffcc00; }
+    border-bottom: 2px solid #ffcc00; }
   .nav__buttons li:hover {
-    border-bottom: 3px solid #000;
+    border-bottom: 2px solid #000;
     transition-duration: 0.2s; }
 
 .btn_close_menu {
@@ -248,5 +248,143 @@ body {
   background: url("/style/img/header_main.jpg") no-repeat;
   background-size: cover;
   z-index: 1; }
+
+.header__content {
+  padding-top: 140px;
+  color: white; }
+  .header__content h1 {
+    text-transform: uppercase;
+    font-size: 36px;
+    margin-bottom: 40px;
+    font-family: "GothamProBold"; }
+  .header__content p {
+    font-size: 14px;
+    line-height: 1.57;
+    margin-bottom: 65px; }
+
+.header__buttons {
+  display: flex;
+  column-gap: 20px;
+  align-items: center; }
+
+.description__delivery {
+  background-color: #ffcc00;
+  color: black;
+  font-family: "GothamProBold";
+  padding: 15px 29px;
+  font-size: 12px;
+  line-height: 1.83;
+  cursor: pointer;
+  border: 0;
+  outline: 0; }
+
+.catalog {
+  color: white; }
+  .catalog span {
+    margin-left: 7px;
+    text-decoration: underline;
+    cursor: pointer; }
+
+#catalog {
+  height: 715px; }
+
+.section__header {
+  text-align: center;
+  font-family: "GothamProBold";
+  padding-top: 80px;
+  margin-bottom: 60px;
+  text-transform: uppercase;
+  font-size: 20px;
+  margin-top: 0; }
+
+.catalog__items {
+  display: grid;
+  grid-template-columns: repeat(3, 300px);
+  grid-template-rows: 470px;
+  justify-content: space-between; }
+
+.catalog_item {
+  border: solid 2px #f6f6f6;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 35px; }
+  .catalog_item p {
+    font-size: 13px;
+    color: #626262;
+    margin-top: 19px;
+    text-align: center;
+    margin-bottom: 0; }
+  .catalog_item span {
+    color: #0f0f0f;
+    fot-size: 16px;
+    font-family: "GothamProBold";
+    margin-top: 29px;
+    margin-bottom: 0; }
+
+#catalog_item_first {
+  margin-top: 38px; }
+
+#catalog_item_second {
+  margin-top: 45px;
+  margin-bottom: 15px; }
+
+#catalog_item_third {
+  margin-top: 50px; }
+
+.position__name {
+  font-size: 11px;
+  color: #292929;
+  border-bottom: 1px #ccc solid;
+  margin-top: 32px; }
+  .position__name h1 {
+    margin: 0; }
+
+.description_position {
+  background-color: #ffd200;
+  color: black;
+  font-family: "GothamProBold";
+  padding: 15px 47px;
+  border: 0;
+  outline: 0;
+  cursor: pointer;
+  margin-top: 32px; }
+
+#advantages {
+  height: 500px;
+  background-color: #f4f4f4; }
+
+.advantages_items {
+  display: grid;
+  grid-template-columns: repeat(3, 300px);
+  grid-template-rows: 254px;
+  justify-content: space-between; }
+
+.advan_item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 42px;
+  border: 2px solid #ffffff; }
+  .advan_item:hover {
+    background-color: white;
+    transition: 0.2s; }
+  .advan_item img {
+    margin-top: 40px; }
+  .advan_item h1 {
+    margin: 0;
+    margin-top: 40px;
+    font-size: 15px;
+    color: #292929; }
+  .advan_item p {
+    text-align: center;
+    margin: 0;
+    margin-top: 20px;
+    font-size: 12px;
+    color: black;
+    line-height: 1.5; }
+
+#popular_products {
+  height: 600px; }
 
 /*# sourceMappingURL=style.css.map */

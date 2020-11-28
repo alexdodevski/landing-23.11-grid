@@ -1,14 +1,22 @@
-@media screen and (max-width: 980px) { .container { width: 100%; }
+@media screen and (max-width: 980px) { .container { width: 100%; height: 100%; }
   .logo__contact { grid-template-columns: 45% 45%; grid-template-rows: 85px; -webkit-column-gap: 10%; column-gap: 10%; }
   .nav-bar { top: 20px; }
   .nav__contact { -webkit-column-gap: 50px; column-gap: 50px; -webkit-box-pack: end; -ms-flex-pack: end; justify-content: flex-end; }
-  .contact__text { margin-left: 0; } }
+  .contact__text { margin-left: 0; }
+  .header__content { text-align: center; padding-top: 200px; }
+  .header__buttons { width: 100%; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; }
+  #catalog { height: 1760px; }
+  #advantages { height: 1100px; }
+  .advantages_items { grid-template-rows: repeat(3, 253px); grid-template-columns: 300px; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; -ms-flex-line-pack: justify; align-content: space-between; height: 850px; }
+  .catalog__items { grid-template-rows: repeat(3, 470px); grid-template-columns: 300px; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; height: 1600px; -ms-flex-line-pack: justify; align-content: space-between; padding-bottom: 120px; } }
 @media screen and (max-width: 554px) { .logo__contact { grid-template-columns: 100%; grid-template-rows: 100% 50%; -webkit-column-gap: 0; column-gap: 0; justify-items: center; }
   .nav { height: 140px; margin-top: 10px; }
   .nav-bar { margin-top: 29px; padding: 20px 0; }
   .nav__buttons { -webkit-box-orient: vertical; -webkit-box-direction: normal; -ms-flex-direction: column; flex-direction: column; display: none; z-index: 0; }
   .nav__buttons li { padding: 2px 0; }
   .btn_close_menu { display: block; } }
+@media screen and (max-width: 425px) { .header__buttons { -webkit-box-orient: vertical; -webkit-box-direction: normal; -ms-flex-direction: column; flex-direction: column; }
+  .header__content p { margin-bottom: 45px; } }
 @media screen and (max-width: 386px) { .nav { height: 230px; }
   .nav-bar { margin-top: 70px; }
   .nav__contact { -webkit-box-orient: vertical; -webkit-box-direction: normal; -ms-flex-direction: column; flex-direction: column; }

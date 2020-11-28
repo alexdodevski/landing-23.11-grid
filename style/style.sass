@@ -56,7 +56,6 @@ $fontBold : 'GothamProBold'
         &:hover
             background-color: $yellow
             transition-duration: 0.2s
-        &:active
 
 .contact__text
     margin-left: 13px
@@ -71,6 +70,7 @@ $fontBold : 'GothamProBold'
     font-size: 11px
     line-height: 2
     color: #969696
+    font-family: 'GothamPro'
 .nav-bar
     height: 60px
     background-color: $yellow
@@ -377,3 +377,158 @@ $fontBold : 'GothamProBold'
     margin-top: 48px
 #rent3
     margin-top: 34px
+
+// CONTACT 
+#contact
+    height: 520px
+    background: url('/style/img/contact.jpg') no-repeat
+    bacgkround-size: cover
+    position: relative
+#location_pin
+    position: absolute
+    top: 227px
+    left: 31%
+    cursor: pointer
+.contact_content
+    display: flex
+    justify-content: flex-end
+    height: 100%
+
+.contact_text
+    background-color: white
+    width: 380px
+    height: 365px
+    margin-top: 80px
+    opacity: 0
+    transition: 0.2s
+
+#header_contact
+    margin: 0
+    margin-left: 61px
+    margin-top: 60px
+
+#numbers , #adress, #email,
+    position: relative
+    margin-left: 90px
+p
+    margin: 0
+    font-size: 14px
+    color: #292929
+    font-family: $fontBold
+
+#numbers
+    margin-top: 53px
+    position: relative
+    &::before
+        font-family: "Font Awesome 5 Free"
+        content: '\f879'
+        font-weight: 900
+        position: absolute
+        left: -29px
+        font-size: 12px
+        top: -1px
+
+#second_number
+    margin-top: 15px
+
+#adress
+    margin-top: 40px
+    width: 225px
+    p
+        font-family: "GothamPro"
+    &::before
+        font-family: "Font Awesome 5 Free"
+        content: "\f3c5"
+        font-weight: 900
+        position: absolute
+        font-size: 15px
+        top: 1px
+        left: -29px
+#email
+    margin-top: 40px
+    width: 108px
+
+    &::before
+        font-family: "Font Awesome 5 Free"
+        content: "\f0e0"
+        font-weight: 900
+        position: absolute
+        left: -29px
+        font-size: 14px
+        top: 1px
+    p
+        border-bottom: 1px solid #ccc
+        cursor: pointer
+// show contacts
+.contact_text_visible
+    opacity: 1
+    transition: 0.2s
+
+// footer
+#footer
+    height: 196px
+    background-color: #292929
+
+.content_footer
+    height: 100%
+    display: flex
+    flex-direction: column
+    justify-content: center
+
+.margin_first_item
+    margin-bottom: 20px
+
+.footer_item
+    display: flex
+    align-items: flex-end
+    justify-content: space-between
+
+.logo_footer
+    display: flex
+    align-items: center
+
+.logo__text_footer
+    margin-left: 14px
+    margin-top: 5px
+    h1
+        margin: 0
+        text-transform: uppercase
+        font-family: 'GothamProBold'
+        font-size: 20px
+        color: $black
+        letter-spacing: 2px
+        color: white
+    p
+        margin: 0
+        color: white
+.description_footer
+    font-size: 11px
+    line-height: 2
+    font-family: 'GothamPro'
+    color: white
+.nav__contact_footer
+    height: 100%
+    p
+        color: white
+        text-align: right
+        font-size: 18px
+.footer_granti
+    p
+        color: white
+        font-size: 12px
+        font-family: 'GothamPro'
+        line-height: 1.83
+.footer_button
+    button
+        background-color: #292929
+        color: white
+        border: 2px solid white
+        font-family: $fontBold
+        font-size: 12px
+        padding: 14px 23px
+        cursor: pointer
+        outline: 0
+        &:hover
+            background-color: white
+            color: #292929
+            transition: 0.2s

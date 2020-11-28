@@ -4,11 +4,15 @@
 
 // элементы навигации
 
-let btnClose = document.querySelector('.btn_close_menu')
-let navBar = document.querySelector('.nav-bar')
-let navButtons = document.querySelector('.nav__buttons')
+const btnClose = document.querySelector('.btn_close_menu')
+const navBar = document.querySelector('.nav-bar')
+const navButtons = document.querySelector('.nav__buttons')
 
 //классы элементов
+
+const navBarActive = 'nav__bar__active'
+const navButtonsActive = 'nav_buttons__active'
+const btnCloseActive = 'btn__close_active'
 
 // let classListNavButtons = Array.from(navButtons.classList)
 // let classListNavBar = Array.from(navBar.classList)
@@ -17,17 +21,17 @@ let navButtons = document.querySelector('.nav__buttons')
 
 let btnBurgerHeader = function() {
 
-    btnClose.classList.toggle('btn__close_active')
-    navBar.classList.toggle('nav__bar__active')
+    btnClose.classList.toggle(btnCloseActive)
+    navBar.classList.toggle(navBarActive)
 
-    if (!Array.from(navButtons.classList).includes('nav_buttons__active')) {
+    if (!Array.from(navButtons.classList).includes(navButtonsActive)) {
         setTimeout(function() {
-            navButtons.classList.add('nav_buttons__active')
+            navButtons.classList.add(navButtonsActive)
         }, 100)
 
     } else {
         setTimeout(function() {
-            navButtons.classList.remove('nav_buttons__active')
+            navButtons.classList.remove(navButtonsActive)
         }, 50)
     }
 
@@ -36,10 +40,10 @@ let btnBurgerHeader = function() {
 //проверка размеров nav bar и коррекция классов в соответсвии с размерами
 
 let btnCheckedSize = function() {
-    if (document.body.clientWidth > 544 && Array.from(navBar.classList).includes('nav__bar__active')) {
-        navBar.classList.remove('nav__bar__active')
-        navButtons.classList.remove('nav_buttons__active')
-        btnClose.classList.remove('btn__close_active')
+    if (document.body.clientWidth > 544 && Array.from(navBar.classList).includes(navBarActive)) {
+        navBar.classList.remove(navBarActive)
+        navButtons.classList.remove(navButtonsActive)
+        btnClose.classList.remove(btnCloseActive)
     }
 
 }
@@ -48,3 +52,17 @@ let btnCheckedSize = function() {
 
 btnClose.addEventListener('click', btnBurgerHeader)
 setInterval(btnCheckedSize, 100)
+
+
+
+// Нажатие пина в контактах
+
+const locationPin = document.querySelector('#location_pin')
+
+let openContacts = function() {
+    const contact = document.querySelector('.contact_text')
+    contact.classList.toggle('contact_text_visible')
+    console.log("hi")
+}
+
+locationPin.addEventListener('click', openContacts)

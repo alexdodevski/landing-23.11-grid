@@ -6,9 +6,13 @@
   .header__content { text-align: center; padding-top: 200px; }
   .header__buttons { width: 100%; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; }
   #catalog { height: 1760px; }
+  #catalog .catalog__items { grid-template-rows: repeat(3, 470px); grid-template-columns: 300px; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; height: 1600px; -ms-flex-line-pack: justify; align-content: space-between; padding-bottom: 120px; }
   #advantages { height: 1100px; }
   .advantages_items { grid-template-rows: repeat(3, 253px); grid-template-columns: 300px; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; -ms-flex-line-pack: justify; align-content: space-between; height: 850px; }
-  .catalog__items { grid-template-rows: repeat(3, 470px); grid-template-columns: 300px; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; height: 1600px; -ms-flex-line-pack: justify; align-content: space-between; padding-bottom: 120px; } }
+  #popular_products { height: 1700px; }
+  .products_items { grid-template-columns: 220px; grid-template-rows: repeat(4, 345px); -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; -ms-flex-line-pack: justify; align-content: space-between; height: 1500px; }
+  #services { height: 1100px; }
+  .services_items { grid-template-rows: repeat(3, 253px); grid-template-columns: 300px; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; -ms-flex-line-pack: justify; align-content: space-between; height: 850px; } }
 @media screen and (max-width: 554px) { .logo__contact { grid-template-columns: 100%; grid-template-rows: 100% 50%; -webkit-column-gap: 0; column-gap: 0; justify-items: center; }
   .nav { height: 140px; margin-top: 10px; }
   .nav-bar { margin-top: 29px; padding: 20px 0; }

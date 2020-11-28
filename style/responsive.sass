@@ -21,6 +21,13 @@
         justify-content: center
     #catalog
         height: 1760px
+        .catalog__items
+            grid-template-rows: repeat(3, 470px)
+            grid-template-columns: 300px
+            justify-content: center
+            height: 1600px
+            align-content: space-between
+            padding-bottom: 120px
     #advantages
         height: 1100px
     .advantages_items
@@ -29,13 +36,22 @@
         justify-content: center
         align-content: space-between
         height: 850px
-    .catalog__items
-        grid-template-rows: repeat(3, 470px)
+    #popular_products
+        height: 1700px
+    .products_items
+        grid-template-columns: 220px
+        grid-template-rows: repeat(4,345px)
+        justify-content: center
+        align-content: space-between
+        height: 1500px
+    #services
+        height: 1100px
+    .services_items
+        grid-template-rows: repeat(3, 253px)
         grid-template-columns: 300px
         justify-content: center
-        height: 1600px
         align-content: space-between
-        padding-bottom: 120px
+        height: 850px
 @media screen and ( max-width:554px  )
     .logo__contact
         grid-template-columns: 100%

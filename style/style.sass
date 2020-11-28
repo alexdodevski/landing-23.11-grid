@@ -293,3 +293,87 @@ $fontBold : 'GothamProBold'
 // POPULAR ITEMS
 #popular_products
     height: 600px
+.products_items
+    display: grid
+    grid-template-columns: repeat(4,220px)
+    grid-template-rows: 345px
+    justify-content: space-between
+
+.product_item
+    border: solid 2px #f6f6f6
+    display: flex
+    flex-direction: column
+    align-items: center
+    padding: 20px 15px
+    position: relative
+    p
+        color: black
+        font-family: $fontBold
+        font-size: 13px
+        margin: 0
+        border-bottom: 1px #ccc solid
+        margin-top: 22px
+.prices
+    margin-top: 20px
+#old_price
+    text-decoration: line-through
+    color: #979797
+    font-size: 10px
+#promotion_price
+    color: #ff0000
+    font-size: 16px
+    font-family: $fontBold
+    margin-left: 15px
+.price_button
+    color: black
+    font-family: $fontBold
+    padding: 18px 67px
+    background-color: $yellow
+    border: 0
+    outline: 0
+    cursor: pointer
+    margin-top: 25px
+#promotion
+    position: absolute
+    text-transform: uppercase
+    background-color: #ff0000
+    color: white
+    font-size: 10px
+    padding: 6px 8px
+    left: 31px
+    top: 31px
+#actual_price
+    color: black
+    font-size: 16px
+    font-family: $fontBold
+    margin-left: 15px
+
+// SERVICES
+#services
+    height: 490px
+    background-color: #f4f4f4
+.services_items
+    display: grid
+    grid-template-columns: repeat(3, 300px)
+    grid-template-rows: 254px
+    justify-content: space-between
+.services_item
+    border: 2px solid white
+    display: flex
+    flex-direction: column
+    align-items: center
+    &:hover
+        background-color: white
+    p
+        color: black
+        font-family: $fontBold
+        font-size: 15px
+        margin: 0
+        border-bottom: 1px #ccc solid
+        margin-top: 36px
+#rent1
+    margin-top: 52px
+#rent2
+    margin-top: 48px
+#rent3
+    margin-top: 34px

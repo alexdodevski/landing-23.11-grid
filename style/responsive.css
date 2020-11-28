@@ -8,7 +8,7 @@
   .nav-bar { margin-top: 29px; padding: 20px 0; }
   .nav__buttons { -webkit-box-orient: vertical; -webkit-box-direction: normal; -ms-flex-direction: column; flex-direction: column; display: none; z-index: 0; }
   .nav__buttons li { padding: 2px 0; }
-  .btn_close_menu { opacity: 1 !important; } }
+  .btn_close_menu { display: block; } }
 @media screen and (max-width: 386px) { .nav { height: 230px; }
   .nav-bar { margin-top: 70px; }
   .nav__contact { -webkit-box-orient: vertical; -webkit-box-direction: normal; -ms-flex-direction: column; flex-direction: column; }

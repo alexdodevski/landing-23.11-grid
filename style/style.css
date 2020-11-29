@@ -314,6 +314,9 @@ body {
     padding: 15px 15px 15px 10px;
     outline-color: #ffcc00; }
 
+.modal_form {
+  display: block; }
+
 .modal_inputs {
   display: flex;
   flex-direction: column;
@@ -340,8 +343,32 @@ body {
 .modal_visible {
   display: block; }
 
+.modal_disable {
+  display: none; }
+
+.answer_visible {
+  display: flex !important; }
+
 .modal_content_visible {
   opacity: 1; }
+
+.disabled_form {
+  border-color: red; }
+
+.modal_answer {
+  height: 150px;
+  text-align: center;
+  display: none;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center; }
+
+.answer_header {
+  font-size: 23px; }
+
+.answer_text {
+  font-size: 16px;
+  font-family: "GothamPro"; }
 
 .header__main {
   height: 550px;

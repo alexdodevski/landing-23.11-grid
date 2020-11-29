@@ -25,7 +25,8 @@
   .btn_close_menu { display: block; }
   .modal_content { width: 80%; height: 350px; top: 150px; }
   .modal_content h1 { width: 60%; margin: 0 auto; }
-  .modal_inputs input { width: 95%; } }
+  .modal_inputs input { width: 95%; }
+  .modal_answer { height: 200px; } }
 @media screen and (max-width: 425px) { .header__buttons { -webkit-box-orient: vertical; -webkit-box-direction: normal; -ms-flex-direction: column; flex-direction: column; }
   .header__content p { margin-bottom: 45px; }
   .description__delivery { margin-bottom: 10px; }

@@ -74,13 +74,13 @@ locationPin.addEventListener('click', openContacts)
 
 let modalWindow = document.querySelector('.modal')
 let modalContent = document.querySelector('.modal_content')
-console.log(modalContent)
+
 
 // кнопки обратного звонка и модального окна
 let callbackBtns = document.querySelectorAll('.btn_callback')
-
 let btnClosedModal = document.querySelector('.btn_closed_modal')
-let btnModalWindow = document.querySelector('.modal_button')
+let btnModalWindow = document.querySelector('.modal_button > button')
+
 
 // функция открытия модального окна
 let workModalWindows = function() {
@@ -90,24 +90,118 @@ let workModalWindows = function() {
     }, 200)
 }
 
-// функция закрытия модального окна при нажатии на произвольную область
-let closeModalWindow = function(event) {
-        if (event.target == modalWindow) {
-            modalWindow.classList.remove('modal_visible')
-            modalContent.classList.remove('modal_content_visible')
-        }
-    }
-    // функция закрытия модального окна через кнопку close modal и кнопку отправки
+// инпуты имени и телефона формы
+let nameInput = document.querySelector('.name_input')
+let phoneInput = document.querySelector('.phone_input')
 
-let workBtnClosedModal = function() {
+
+// функция проверки поля ввода имени
+function validationName() {
+    let value = nameInput.value
+        // проверка на пустое поле
+    if (value.length === 0) {
+        nameInput.classList.add('disabled_form')
+    }
+    // проверяем есть ли заглавная буква в имени, если нет добавляем класс
+    if (!value.includes(value[0].toUpperCase())) {
+        nameInput.classList.add('disabled_form')
+    } else {
+        nameInput.classList.remove('disabled_form')
+    }
+
+}
+
+
+//функция проверки поля ввода телефона 
+function validationPhone() {
+    let value = phoneInput.value
+        //проверка на пустое поле
+    if (value.length === 0) {
+        phoneInput.classList.add('disabled_form')
+        phoneInput.value = "+7"
+    } else if (!value.includes('+7') || value.length < 12 || value.length > 12 || value.includes(" ")) {
+        phoneInput.classList.add('disabled_form') // проверяем если в поле нет "+7", или поле менее или более 12 символов , или есть пробел ? тогда добавляем класс
+    } else {
+        phoneInput.classList.remove('disabled_form')
+    }
+}
+
+
+// форма и ответный текст модального окна
+let formModalWindow = document.querySelector('.modal_form')
+let answerModalWindow = document.querySelector('.modal_answer')
+
+
+// функция подтверждения и отправки формы 
+let workModalDone = function() {
+    let phoneValue = phoneInput.value
+    let nameValue = nameInput.value
+
+    if (phoneValue == "" || phoneValue == "+7" || nameValue == "") {
+        phoneInput.classList.add('disabled_form')
+        nameInput.classList.add('disabled_form')
+    }
+
+
+    if (!Array.from(nameInput.classList).includes('disabled_form') && !Array.from(phoneInput.classList).includes('disabled_form')) {
+        formModalWindow.classList.toggle('modal_disable')
+        answerModalWindow.classList.toggle('answer_visible')
+        phoneInput.classList.remove('disabled_form')
+        nameInput.classList.remove('disabled_form')
+    }
+
+}
+
+
+// функция закрытия модального окна при нажатии на произвольную область + удаление старых данных из формы
+let closeModalWindow = function(event) {
+    if (event.target == modalWindow) {
         modalWindow.classList.remove('modal_visible')
         modalContent.classList.remove('modal_content_visible')
-    }
-    // события на кнопках и окне
 
+        if (Array.from(formModalWindow.classList).includes('modal_disable')) {
+            formModalWindow.classList.toggle('modal_disable')
+        }
+
+
+        if (Array.from(answerModalWindow.classList).includes('answer_visible')) {
+            answerModalWindow.classList.toggle('answer_visible')
+        }
+
+        nameInput.value = ""
+        phoneInput.value = ""
+    }
+}
+
+
+// функция закрытия модального окна через кнопку close modal + удаление старых данных из формы
+let workBtnClosedModal = function() {
+    modalWindow.classList.remove('modal_visible')
+    modalContent.classList.remove('modal_content_visible')
+
+    if (Array.from(formModalWindow.classList).includes('modal_disable')) {
+        formModalWindow.classList.toggle('modal_disable')
+    }
+
+
+    if (Array.from(answerModalWindow.classList).includes('answer_visible')) {
+        answerModalWindow.classList.toggle('answer_visible')
+    }
+
+    nameInput.value = ""
+    phoneInput.value = ""
+}
+
+
+// события проверки формы
+nameInput.addEventListener('blur', validationName)
+phoneInput.addEventListener('blur', validationPhone)
+
+
+// события на кнопках и окне
 callbackBtns.forEach(item => {
     item.addEventListener('click', workModalWindows)
 })
 window.addEventListener('click', closeModalWindow)
 btnClosedModal.addEventListener('click', workBtnClosedModal)
-btnModalWindow.addEventListener('click', workBtnClosedModal)
+btnModalWindow.addEventListener('click', workModalDone)
